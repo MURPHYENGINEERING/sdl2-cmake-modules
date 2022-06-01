@@ -215,7 +215,7 @@ if(SDL2_NET_FOUND)
   if(SDL2_NET_LIBRARY AND NOT TARGET SDL2::Net)
     add_library(SDL2::Net UNKNOWN IMPORTED)
     set_target_properties(SDL2::Net PROPERTIES
-                          IMPORTED_LOCATION "${SDL2_NET_LIBRARY}"
+                          IMPORTED_LOCATION "${SDL2_NET_LIBRARY}/SDL2_net"
                           INTERFACE_INCLUDE_DIRECTORIES "${SDL2_NET_INCLUDE_DIR}"
                           INTERFACE_LINK_LIBRARIES SDL2::Core)
   endif()

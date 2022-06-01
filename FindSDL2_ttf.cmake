@@ -215,7 +215,7 @@ if(SDL2_TTF_FOUND)
   if(SDL2_TTF_LIBRARY AND NOT TARGET SDL2::TTF)
     add_library(SDL2::TTF UNKNOWN IMPORTED)
     set_target_properties(SDL2::TTF PROPERTIES
-                          IMPORTED_LOCATION "${SDL2_TTF_LIBRARY}"
+                          IMPORTED_LOCATION "${SDL2_TTF_LIBRARY}/SDL2_ttf"
                           INTERFACE_INCLUDE_DIRECTORIES "${SDL2_TTF_INCLUDE_DIR}"
                           INTERFACE_LINK_LIBRARIES SDL2::Core)
   endif()

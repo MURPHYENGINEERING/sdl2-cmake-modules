@@ -336,7 +336,7 @@ if(SDL2_FOUND)
   if(SDL2_LIBRARY AND NOT TARGET SDL2::Core)
     add_library(SDL2::Core UNKNOWN IMPORTED)
     set_target_properties(SDL2::Core PROPERTIES
-                          IMPORTED_LOCATION "${SDL2_LIBRARY}"
+                          IMPORTED_LOCATION "${SDL2_LIBRARY}/SDL2"
                           INTERFACE_INCLUDE_DIRECTORIES "${SDL2_INCLUDE_DIR}")
 
     if(APPLE)
