@@ -215,7 +215,7 @@ if(SDL2_IMAGE_FOUND)
   if(SDL2_IMAGE_LIBRARY AND NOT TARGET SDL2::Image)
     add_library(SDL2::Image UNKNOWN IMPORTED)
     set_target_properties(SDL2::Image PROPERTIES
-                          IMPORTED_LOCATION "${SDL2_IMAGE_LIBRARY}"
+                          IMPORTED_LOCATION "${SDL2_IMAGE_LIBRARY}/SDL2_image"
                           INTERFACE_INCLUDE_DIRECTORIES "${SDL2_IMAGE_INCLUDE_DIR}"
                           INTERFACE_LINK_LIBRARIES SDL2::Core)
   endif()
